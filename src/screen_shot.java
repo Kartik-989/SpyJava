@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 
 public class screen_shot {
 	
-    public static void main(String[] args) throws Exception
+    public static void shot() 
     {
     	try {
             
