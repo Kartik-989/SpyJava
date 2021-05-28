@@ -19,14 +19,14 @@ public class saving_events {
     void savefile(String x) {
         File f = new File("/home/kartik/Desktop/data.txt");
         if(f.exists()){
-            System.out.println("File exists");
+            //System.out.println("File exists");
             if(f.canWrite()){
                 FileWriter fw = null;
                 try {
                     fw = new FileWriter("/home/kartik/Desktop/data.txt", true);
                     fw.write(x+"\n");
                     fw.close();
-                    System.out.println("String writed");
+                    //System.out.println("String writed");
                 } catch (IOException ex) {
                     Logger.getLogger(saving_events.class.getName()).log(Level.SEVERE, null, ex);
                 } finally {
@@ -43,12 +43,12 @@ public class saving_events {
         else{
             try {
                 if(f.createNewFile()){
-                    System.out.println("File created");
+                   // System.out.println("File created");
                     if(f.canWrite()){
                         FileWriter fw = new FileWriter("/home/kartik/Desktop/data.txt");
                         fw.write(x+"\n");
                         fw.close();
-                        System.out.println("String writed");
+                       // System.out.println("String writed");
                         
                         
                     }

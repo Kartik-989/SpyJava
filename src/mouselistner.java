@@ -10,7 +10,7 @@
  */
 
 import org.jnativehook.mouse.*;
-public  class mouselistner implements NativeMouseInputListener{
+public  class mouselistner implements NativeMouseListener{
 
     @Override
     public void nativeMouseClicked(NativeMouseEvent me) {
@@ -36,21 +36,9 @@ public  class mouselistner implements NativeMouseInputListener{
         mouse_events.savefile(x);
     }
 
-    @Override
-    public void nativeMouseMoved(NativeMouseEvent me) {
-        String x = "mouse moved " + me.getX() + ", " + me.getY();
-       // System.out.println(x);
-        saving_events mouse_events = new saving_events();
-        mouse_events.savefile(x);
-    }
+  
 
-    @Override
-    public void nativeMouseDragged(NativeMouseEvent me) {
-        String x = "mouse dragged " + me.getX() + ", " + me.getY();
-       // System.out.println(x);
-        saving_events mouse_events = new saving_events();
-        mouse_events.savefile(x);
-    }
+    
     
     
    

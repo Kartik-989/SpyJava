@@ -10,14 +10,26 @@
  */
 
 import org.jnativehook.mouse.*;
-public class mousemotionhandler  implements NativeMouseWheelListener{
+public class mousemotionhandler  implements NativeMouseMotionListener{
+
+   
 
     @Override
-    public void nativeMouseWheelMoved(NativeMouseWheelEvent mme) {
-        String x = "mouse rotation "+mme.getWheelRotation();
-        //System.out.println(x);
-        saving_events mouse_rotation = new saving_events();
-        mouse_rotation.savefile(x);
+    public void nativeMouseMoved(NativeMouseEvent me) {
+        String x = "mouse moved " + me.getX() + ", " + me.getY();
+       // System.out.println(x);
+        saving_events mouse_events = new saving_events();
+        mouse_events.savefile(x);
     }
+
+    @Override
+    public void nativeMouseDragged(NativeMouseEvent me) {
+       /* String x = "mouse dragged " + me.getX() + ", " + me.getY();
+       // System.out.println(x);
+        saving_events mouse_events = new saving_events();
+        mouse_events.savefile(x);*/
+    }    
+
+   
     
 }
